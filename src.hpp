@@ -116,7 +116,7 @@ public:
         // If already very close to target, stop to avoid unnecessary motion
         Vec to_tar = pos_tar - pos_cur;
         double dist = to_tar.norm();
-        if (dist <= std::max(2 * EPSILON, r * 0.5)) {
+        if (dist <= EPSILON) {
             return Vec();
         }
 
@@ -151,4 +151,3 @@ public:
 
 
 #endif //PPCA_SRC_HPP
-
